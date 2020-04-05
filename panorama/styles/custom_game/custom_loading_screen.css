@@ -1,0 +1,14 @@
+.AddonLoadingRoot
+{
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+#CustomSplashImage
+{
+    width: 100%;
+    height: 100%;
+    horizontal-align: center;
+    vertical-align: center;
+}

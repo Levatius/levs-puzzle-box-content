@@ -1,0 +1,80 @@
+<root>
+    <styles>
+        <include src="file://{resources}/styles/dotastyles.css" />
+        <include src="file://{resources}/styles/battle_pass/current_battle_pass.css" />
+        <include src="file://{resources}/styles/play.css" />
+        <include src="file://{resources}/styles/custom_game/team_select.css"/>
+    </styles>
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/team_select.js"/>
+    </scripts>
+
+    <Panel class="TeamSelect">
+        <Panel hittest="false" id="TeamSelectContainer" selectionpos="auto">
+
+            <!--Game Info and Unassigned players, right hand panel-->
+            <Panel id="GameAndPlayersRoot">
+
+                <Panel id="UnassignedAndTeamsPanel">
+                    <!--Unassigned players-->
+                    <Panel id="UnassignedPlayerPanel">
+                        <Button id="UnassignedPlayersButton" onactivate="OnLeaveTeamPressed()">
+                            <Panel id="UnassignedPlayersHeader">
+                                <Label text="#custom_game_team_select_unassigned_players"/>
+                            </Panel>
+                            <Panel id="UnassignedPlayersDivider"/>
+                            <Panel id="UnassignedPlayersContainerParent">
+                                <Panel id="UnassignedPlayersContainer"/>
+                                <Panel id="StartGameCountdownTimer">
+                                    <Image id="TimerRing" src="s2r://panorama/images/status_icons/timer_ring.psd"/>
+                                    <Label id="TeamSelectTimer" text="#custom_game_team_select_timer"/>
+                                    <Panel id="TimerLabelBox">
+                                        <Label id="TimerLabelAutoStart" text="#custom_game_team_select_auto_start"/>
+                                        <Label id="TimerLabelGameStart" text="#custom_game_team_select_starting"/>
+                                    </Panel>
+                                </Panel>
+                            </Panel>
+                        </Button>
+                    </Panel>
+
+                    <Panel id="TeamsList">
+                        <Panel id="TeamsListGroup">
+                            <Panel id="TeamListHeader">
+                                <Label id="TeamListHeaderLabel" text="#custom_game_team_select"/>
+                                <Image id="TeamListLockedIcon" src="s2r://panorama/images/control_icons/lock_small.png"/>
+                            </Panel>
+                            <Panel id="TeamsListDivider"/>
+                            <Panel id="TeamsListRoot"/>
+                        </Panel>
+                    </Panel>
+
+                    <Panel id="OptionsRoot">
+                        <Panel id="MoveOptions">
+                            <Button id="AutoAssignButton" class="PlayButton" onactivate="OnAutoAssignPressed()">
+                                <Label text="#custom_game_team_select_auto_assign"/>
+                            </Button>
+
+                            <Button id="ShuffleTeamAssignmentButton" class="PlayButton" onactivate="OnShufflePlayersPressed()">
+                                <Label text="#custom_game_team_select_shuffle"/>
+                            </Button>
+                        </Panel>
+
+                        <!--Start and lock button-->
+                        <Button id="LockAndStartButton" class="PlayButton" onactivate="OnLockAndStartPressed()">
+                            <Label text="#custom_game_team_select_lock_start"/>
+                        </Button>
+                        <Button id="CancelAndUnlockButton" class="PlayButton" onactivate="OnCancelAndUnlockPressed()">
+                            <Label text="#custom_game_team_select_cancel_unlock"/>
+                        </Button>
+                    </Panel>
+                </Panel>
+            </Panel>
+
+            <!--Teams List, left hand panel-->
+
+
+            <!--Empty space to let the loading screen and chat be visible-->
+            <Panel hittest="false" id="TeamsSelectEmptySpace"/>
+        </Panel>
+    </Panel>
+</root>

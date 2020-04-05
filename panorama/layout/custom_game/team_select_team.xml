@@ -1,0 +1,17 @@
+<root>
+    <styles>
+        <include src="file://{resources}/styles/dotastyles.css"/>
+        <include src="file://{resources}/styles/custom_game/team_select.css"/>
+    </styles>
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/team_select_team.js"/>
+    </scripts>
+    <Button class="TeamSelectTeam" onactivate="OnJoinTeamPressed()">
+        <Panel id="TeamBackgroundGradient" />
+        <Panel id="TeamBackgroundGradientHighlight" />
+        <Panel id="TeamGroup" >
+            <Label id="TeamNameLabel" text="Wow"/>
+            <Panel id="PlayerList" />
+        </Panel>
+    </Button>
+</root>
