@@ -1,0 +1,14 @@
+<root>
+    <styles>
+        <include src="file://{resources}/styles/dotastyles.css" />
+        <include src="file://{resources}/styles/custom_game/notification.css" />
+    </styles>
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/notification.js" />
+    </scripts>
+    <Panel hittest="false" class="Notification">
+        <Panel hittest="false" id="LevelStartNotification" text="">
+            <Label hittest="false" id="LevelStartText" class="TitleFont" text="" />
+        </Panel>
+    </Panel>
+</root>

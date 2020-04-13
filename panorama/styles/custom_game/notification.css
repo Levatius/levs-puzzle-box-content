@@ -1,0 +1,39 @@
+.Notification
+{
+    width: 100%;
+    height: 100%;
+}
+
+#LevelStartNotification
+{
+    flow-children: down;
+
+    color: white;
+    horizontal-align: center;
+    margin: 0px;
+    margin-top: 64px;
+
+    font-size: 96px;
+    font-weight: bold;
+    opacity: 0;
+    visibility: collapse;
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+    border: 0px solid white;
+    transform: scaleX(2) scaleY(2);
+}
+
+.show #LevelStartNotification
+{
+    opacity: 1;
+    transform: scaleX(1) scaleY(1);
+    visibility: visible;
+}
+
+#LevelStartText
+{
+    text-shadow: 4px 4px 4px #121212;
+    color: red;
+    horizontal-align: center;
+    font-size: 48px;
+}
